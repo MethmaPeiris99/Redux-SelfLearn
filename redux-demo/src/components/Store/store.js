@@ -1,4 +1,5 @@
 import {buyCakeAction} from '../Actions/buyCakeAction';
+import {buyIceCreamAction} from "../Actions/buyIceCreamAction";
 import {createStore} from "redux";
 import reducer from "../Reducers/buyCakeReducer";
 
@@ -12,6 +13,7 @@ export const store = () => {
     store.dispatch(buyCakeAction())
     store.dispatch(buyCakeAction())
     store.dispatch(buyCakeAction())
+
     unsubscribe();
 
 }

@@ -1,7 +1,7 @@
 import * as types from '../Actions';
 
 const initialState = {
-    numberOfCakes: 10
+    numberOfCakes: 10,
 };
 
 export default function reducer (state = initialState, action) {
