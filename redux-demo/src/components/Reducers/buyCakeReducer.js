@@ -4,7 +4,7 @@ const initialState = {
     numberOfCakes: 10,
 };
 
-export default function reducer (state = initialState, action) {
+export default function buyCakeReducer (state = initialState, action) {
     switch(action.type){
         case types.BUY_CAKE:
             return{
