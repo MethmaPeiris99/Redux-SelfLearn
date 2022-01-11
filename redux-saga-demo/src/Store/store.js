@@ -2,6 +2,7 @@ import {setUserAction} from '../Actions/setUserAction';
 import {combineReducers, createStore, applyMiddleware} from "redux";
 import setUserReducer from "../Reducers/setUserReducer";
 import createSagaMiddleware from "redux-saga";
+import watcherSaga from "../Sagas/watcherSaga";
 
 
 export const store = () => {
@@ -16,5 +17,6 @@ export const store = () => {
     const store = createStore(rootReducer,{},applyMiddleware(...middleware)); //create the redux store
     console.log('Initial state: ', store.getState())
 
+    sagaMiddleware.run(watcherSaga)
 
 }
