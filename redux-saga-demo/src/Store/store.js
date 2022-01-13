@@ -1,4 +1,3 @@
-import {setUserAction} from '../Actions/setUserAction';
 import {combineReducers, createStore, applyMiddleware} from "redux";
 import setUserReducer from "../Reducers/setUserReducer";
 import createSagaMiddleware from "redux-saga";
