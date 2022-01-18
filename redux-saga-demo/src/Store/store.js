@@ -1,18 +1,16 @@
 import {combineReducers, createStore, applyMiddleware} from "redux";
-import setUserReducer from "../Reducers/setUserReducer";
+import fetchDataReducer from "../Reducers/fetchDataReducer";
 import createSagaMiddleware from "redux-saga";
 import watcherSaga from "../Sagas/watcherSaga";
 
 export const store = () => {
     const rootReducer = combineReducers({
-        setUser: setUserReducer
+        fetchData: fetchDataReducer
     })
 
     const sagaMiddleware = createSagaMiddleware(); //create the redux saga
 
-    const middleware = [sagaMiddleware];
-
-    const store = createStore(rootReducer,{},applyMiddleware(...middleware)); //create the redux store
+    createStore(rootReducer,{},applyMiddleware(sagaMiddleware)); //create the redux store
     console.log('Initial state: ', store.getState())
 
     sagaMiddleware.run(watcherSaga)
