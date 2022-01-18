@@ -1,2 +1,3 @@
-export const GET_USER = 'GET_USER'
-export const SET_USER = 'SET_USER'
+export const SEND_REQUEST  = 'SEND_REQUEST'
+export const SEND_REQUEST_SUCCESS = 'SEND_REQUEST_SUCCESS'
+export const SEND_REQUEST_FAIL = 'SEND_REQUEST_FAIL'
