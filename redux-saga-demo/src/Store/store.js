@@ -3,7 +3,6 @@ import setUserReducer from "../Reducers/setUserReducer";
 import createSagaMiddleware from "redux-saga";
 import watcherSaga from "../Sagas/watcherSaga";
 
-
 export const store = () => {
     const rootReducer = combineReducers({
         setUser: setUserReducer
