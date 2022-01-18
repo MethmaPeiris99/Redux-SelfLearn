@@ -1,8 +1,9 @@
-import {takeLatest} from "redux-saga/effects"
-import {GET_USER} from "../Actions";
-import {getUserSaga} from "./getUserSaga";
+import {take, call, all} from "redux-saga/effects";
+import {fetchDataSaga} from '../Sagas/fetchDataSaga';
 
 export default function* watcherSaga() {
-    yield takeLatest(GET_USER, getUserSaga);
+    yield all([
+        fetchDataSaga()
+    ]);
 
 }
