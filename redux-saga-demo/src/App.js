@@ -1,4 +1,6 @@
 import {Component} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from "react-bootstrap";
 
 export class App extends Component{
     constructor(props) {
@@ -16,11 +18,11 @@ export class App extends Component{
     render(){
         return(
             <div>
-                <button
+                <Button
                     onClick={this.fetchData}
-                    className="btn btn-primary"
+                    className="btn btn-primary btn-lg"
                 >Fetch
-                </button>
+                </Button>
 
             </div>
         )
