@@ -1,4 +1,4 @@
-import * as types from '../Actions';
+import * as actionTypes from '../Actions';
 
 const initialState = {
     loading: false,
@@ -6,21 +6,21 @@ const initialState = {
     error: {}
 };
 
-export default function fetchDataReducer (state=initialState, action) {
+export default function handleFetchDataReducer (action, state=initialState) {
     switch(action.type){
-        case types.SEND_REQUEST:
+        case actionTypes.SEND_REQUEST:
             return {
                 ...state,
                 loading: true
             }
-        case types.SEND_REQUEST_SUCCESS:
+        case actionTypes.SEND_REQUEST_SUCCESS:
             return {
                 ...state,
                 loading: false,
                 user: action.payload,
                 error: {}
             }
-        case types.SEND_REQUEST_FAIL:
+        case actionTypes.SEND_REQUEST_FAIL:
             return {
                 ...state,
                 loading: false,
@@ -28,6 +28,6 @@ export default function fetchDataReducer (state=initialState, action) {
                 error: action.error
             }
         default:
-            return state
+            return state;
     }
 }
