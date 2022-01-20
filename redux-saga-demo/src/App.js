@@ -11,10 +11,10 @@ export class App extends Component{
         this.state = {
 
         }
-        this.fetchData = this.fetchData.bind(this)
+        this.handleFetchData = this.handleFetchData.bind(this)
     }
 
-    fetchData() {
+    handleFetchData() {
         this.props.fetchData(2);
     }
 
@@ -22,7 +22,7 @@ export class App extends Component{
         return(
             <div>
                 <Button
-                    onClick={this.fetchData}
+                    onClick={this.handleFetchData}
                     className="btn btn-primary btn-lg"
                 >Fetch
                 </Button>
