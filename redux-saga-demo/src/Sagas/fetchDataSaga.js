@@ -13,7 +13,7 @@ function* asyncFetchRequest(action) {
     }
 }
 
-export function* fetchDataSaga(action){
+export function* fetchDataSaga(){
 
     yield takeEvery(types.SEND_REQUEST, asyncFetchRequest)
 
