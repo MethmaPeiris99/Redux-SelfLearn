@@ -27,7 +27,9 @@ export class App extends Component{
                 >Fetch
                 </Button>
                 <div>
-
+                    {
+                        this.props.user
+                    }
                 </div>
             </div>
         )
